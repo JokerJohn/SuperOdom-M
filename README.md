@@ -1,8 +1,6 @@
 # SuperOdom-M
 Minmal ICP case of SuperOdom for degenercy detetcion, only depending on Ceres and Eigen.
 
-
-
 ```c++
 #include "superloc_icp_integration.h"
 
@@ -26,6 +24,10 @@ bool success = SuperLocICPIntegration::runSuperLocICP(
 auto end_total = std::chrono::high_resolution_clock::now();
 
 ```
+
+You can use the Autodiff function of Ceres to verify  the Jacobian is corrected derived. Other configs are keep the same with SuperOdom.
+
+![image-20250613153500037](./README/image-20250613153500037.png)
 
 
 

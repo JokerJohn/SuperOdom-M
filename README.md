@@ -1,5 +1,5 @@
 # SuperOdom-M
-Minmal ICP case of SuperOdom for degenercy detetcion, only depending on Ceres and Eigen.
+Minmal ICP case of SuperOdom for degenercy detetcion, only depending on Ceres and Eigen. We only consider the plane features.
 
 ```c++
 #include "superloc_icp_integration.h"
@@ -38,7 +38,7 @@ You can use the Autodiff function of Ceres to verify  the Jacobian is corrected 
 
 ![image-20250613153500037](./README/image-20250613153500037.png)
 
-in my desktop, here is a result for self-registration of a cylinder point cloud with initial pose (0.2m, 0.25m, 1.25m, 0 ,0, -50deg) .
+in my desktop, here is a result for self-registration of a cylinder point cloud with initial pose (0.2m, 0.25m, 1.25m, 0 ,0, -50deg) , search radius 1.0m. the evaluation resluts ofd CD and P2P error are based on a given trunced distance of 0.2m.
 
 ![image-20250613153743410](./README/image-20250613153743410.png)
 

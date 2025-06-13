@@ -23,6 +23,15 @@ bool success = SuperLocICPIntegration::runSuperLocICP(
 
 auto end_total = std::chrono::high_resolution_clock::now();
 
+
+// cmakelist
+find_package(Ceres REQUIRED)
+find_package(TBB REQUIRED)
+target_link_libraries(icp_test_runner2
+        ${CERES_LIBRARIES}
+        TBB::tbb
+        )
+
 ```
 
 You can use the Autodiff function of Ceres to verify  the Jacobian is corrected derived. Other configs are keep the same with SuperOdom.

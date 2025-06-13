@@ -1,5 +1,5 @@
 # SuperOdom-M
-Minmal ICP case of SuperOdom for degenercy detetcion, only depending on Ceres and Eigen. We only consider the plane features.
+Minmal ICP case of SuperOdom for degeneracy detetcion, only depending on Ceres and Eigen. We only consider the plane features. I use this to test my degeneracy registration methods [DCReg](https://github.com/JokerJohn/DCReg) .
 
 Related package:  https://github.com/superxslam/SuperOdom
 
@@ -25,7 +25,9 @@ bool success = SuperLocICPIntegration::runSuperLocICP(
 
 auto end_total = std::chrono::high_resolution_clock::now();
 
+```
 
+```cmake
 // cmakelist
 find_package(Ceres REQUIRED)
 find_package(TBB REQUIRED)
@@ -33,7 +35,6 @@ target_link_libraries(icp_test_runner2
         ${CERES_LIBRARIES}
         TBB::tbb
         )
-
 ```
 
 You can use the Autodiff function of Ceres to verify  the Jacobian is corrected derived. Other configs are keep the same with SuperOdom.

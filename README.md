@@ -1,6 +1,8 @@
 # SuperOdom-M
 Minmal ICP case of SuperOdom for degenercy detetcion, only depending on Ceres and Eigen. We only consider the plane features.
 
+Related package:  https://github.com/superxslam/SuperOdom
+
 ```c++
 #include "superloc_icp_integration.h"
 
@@ -89,6 +91,6 @@ the aligned cloud
 
 ![image-20250613154052218](./README/image-20250613154052218.png)
 
-Related package:  https://github.com/superxslam/SuperOdom
+
 
  

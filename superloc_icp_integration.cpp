@@ -354,18 +354,6 @@ namespace ICPRunner {
                 result.final_rmse = rmse;
                 result.final_fitness = fitness;
 
-                // 7. 估计配准误差和协方差 - 与原始SuperLoc保持一致
-                EstimateRegistrationError(problem, pose_parameters, result);
-
-                // 8. 基于特征可观测性计算不确定性
-                computeUncertaintiesFromHistogram(PlaneFeatureHistogramObs, result);
-
-                // 保存特征直方图供后续分析
-                result.feature_histogram = PlaneFeatureHistogramObs;
-
-                // 9. 判断退化
-                checkDegeneracy(result);
-
                 break;
             }
         }
